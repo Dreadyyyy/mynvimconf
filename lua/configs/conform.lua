@@ -5,6 +5,8 @@ local options = {
     html = { "prettier" },
     c = { "clang_format" },
     rust = { "rustfmt" },
+    python = { "black" },
+    gdscript = { "gdformat" },
   },
 
   formatters = {
@@ -12,6 +14,8 @@ local options = {
       prepend_args = { "-style={IndentWidth: 4}" },
     },
   },
+
+  notify_on_error = false,
 
   format_on_save = {
     -- These options will be passed to conform.format()

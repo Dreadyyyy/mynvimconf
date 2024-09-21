@@ -21,7 +21,7 @@ M.ui = {
 }
 
 M.mason = {
-  pkgs = { "clang-format" },
+  pkgs = { "clang-format", "black", "gdtoolkit" },
 }
 
 return M

@@ -4,6 +4,7 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     c = { "clang_format" },
+    cpp = { "clang_format" },
     rust = { "rustfmt" },
     python = { "black" },
     gdscript = { "gdformat" },

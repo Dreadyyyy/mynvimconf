@@ -11,6 +11,8 @@ local servers = {
   "basedpyright",
   "gopls",
   "rust_analyzer",
+  "jdtls",
+  "dartls",
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"
@@ -23,3 +25,16 @@ for _, lsp in ipairs(servers) do
     capabilities = nvlsp.capabilities,
   }
 end
+
+lspconfig.rust_analyzer.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      checkOnSave = {
+        command = "clippy",
+      },
+    },
+  },
+}

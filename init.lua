@@ -12,11 +12,6 @@ if vim.g.vscode then
   return
 end
 
-local projectfile = vim.fn.getcwd() .. "project.godot"
-if projectfile then
-  vim.fn.serverstart "./godothost"
-end
-
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 
 -- bootstrap lazy and all plugins
